@@ -1,0 +1,43 @@
+.about {
+    margin-bottom: 10em;
+}
+
+.ceremony {
+    padding-bottom: 0;
+}
+
+.ceremony #google-map-1 {
+    margin-top: 1em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+#accomodation {
+    margin-top: 1em;
+    padding-bottom: 4em;
+}
+
+.header .images span {
+    background-image: url(../images/niki-zoli.png);
+}
+
+input[type="text"].youtube-link {
+    width: 98%;
+}
+
+#gift p {
+    padding-top: 1em;
+}
+
+h3.rsvp-name {
+    font-weight: bold;
+}
+h4.flash-text {
+    color: white;
+}

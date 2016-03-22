@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Szőke-Holoda esküvő</title>
+
+    <meta name="description" content="Szőke-Holoda esküvő">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--   Google fonts  -->
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=BenchNine:700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <!--   main stylesheet  -->
+    <link rel="stylesheet" href="burito/stylesheets/red.css" type="text/css" media="screen" title="no title">
+    <link rel="stylesheet" href="burito/stylesheets/main.css" type="text/css" media="screen" title="no title">
+
+    <meta property="og:image" content="burito/images/niki-zoli.png"/>
+
+    <script>
+        // iOS viewport scaling bug fix
+        // https://gist.github.com/901295
+        // Rewritten version
+        // By @mathias, @cheeaun and @jdalton
+
+        (function (doc) {
+            var addEvent = 'addEventListener',
+                    type = 'gesturestart',
+                    qsa = 'querySelectorAll',
+                    scales = [1, 1],
+                    meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+
+            function fix() {
+                meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
+                doc.removeEventListener(type, fix, true);
+            }
+
+            if ((meta = meta[meta.length - 1]) && addEvent in doc) {
+                fix();
+                scales = [.25, 1.6];
+                doc[addEvent](type, fix, true);
+            }
+
+        }(document));
+    </script>
+
+    <!-- custom modernizr build -->
+    <script src="javascript/modernizr.js"></script>
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!-- GoogleMaps -->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="burito/javascript/jQuery-gMap-2.1.5/jquery.gmap.min.js"></script>
+
+    <!-- Flex Slider -->
+    <script type="text/javascript" src="burito/javascript/woothemes-FlexSlider/jquery.flexslider-min.js"></script>
+
+    <!-- jQuery Modal -->
+    <link rel="stylesheet" href="burito/javascript/jquery-modal/jquery.modal.css" type="text/css" media="screen" title="no title">
+    <script type="text/javascript" src="burito/javascript/jquery-modal/jquery.modal.min.js"></script>
+
+    <!-- GoogleMaps, photo gallery and slider -->
+    
+    <!-- custom js class -->
+    <script src="javascript/save_the_date.js"></script>
+
+    <!-- SETTINGS STARTS -->
+    <script>
+
+        var gMapInit = function () {
+            $('#google-map-1').gMap({
+
+                    latitude: 47.936728,
+                    longitude: 18.826317,
+                
+                maptype: 'ROADMAP',
+                zoom: 15,
+                markers: [
+                    {
+                        latitude: 47.936346,
+                        longitude: 18.830351,
+                        html: '<h1 style="font-size: 1.2em;"><a href="https://www.google.com/maps?ll=47.936713,18.830179&z=16&t=m&hl=en-US&gl=US&mapclient=apiv3&cid=12104960969818876392" target="_blank">Malomkert Panzió és Étterem</a></h1><hr>'
+                        + '<p>Nagybörzsöny, Hunyadi tér 18. hszm. 2634</p><p>17:00</p>',
+                        icon: {
+                            image: "burito/images/marker-restaurant_33x50.png",
+                            iconsize: [33, 50],
+                            iconanchor: [16, 40]
+                        }
+                    }
+                    
+                ],
+                doubleclickzoom: false,
+                controls: {
+                    panControl: false,
+                    zoomControl: true,
+                    mapTypeControl: false,
+                    scaleControl: false,
+                    streetViewControl: false,
+                    overviewMapControl: false
+                }
+
+            });
+        };
+
+        $(document).ready(function () {
+            // init Save the Date
+            save_the_date.init({
+                weddingDate: "2016/09/17, 17:00",
+                //Date : enter your wedding date
+                labels: ["nap", "óra", "perc", "másodperc"],
+                //Array of strings : labels of time units
+                sendServerMessages: ["Thank you.", "Sorry, your message could not be sent due to an error."],
+                //Array of strings : Messages from the server on send
+                gallery: [],
+                //Array image pathes
+                titles: []
+            });
+
+            gMapInit();
+        });
+
+        $(window).resize(function () {
+            gMapInit();
+        });
+    </script>
+    <!-- SETTINGS ENDS -->
+
+</head>
+<!--[if lt IE 9]>
+<body id="top" class="ie-fix"><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!-->
+<body id="top"><!--<![endif]-->
+
+<!--- NAVIGATION STARTS -->
+<div class="nav-container">
+    <div class="nav">
+        <a id="full-menu" href="#">&equiv;</a>
+        <a class="active to-scroll" href="#top">Nyitó</a>
+        <a class="to-scroll" href="#about">Rólunk</a>
+        <a class="to-scroll" href="#savethedate">Időpont</a>
+        <a class="to-scroll" href="#ceremony">Szertartás</a>
+        <!-- a href="#" id="gallery">Képek</a -->
+        <a class="to-scroll" href="#gift">Nászajándék</a>
+        <a class="to-scroll" href="#rsvp">Jönnénk!</a>
+        <div class="effect"></div>
+    </div>
+</div>
+<!--- NAVIGATION ENDS -->
+
+<!-- HEADER STARTS -->
+<header class="header" role="banner">
+    <h1 class="wrapper"><span>Zoli</span> és <span>Niki</span></h1>
+
+    <div class="images"><span class="him pile"></span><span class="her pile"></span></div>
+    <h2>
+        <span class="event">házasodnak...</span>
+        <span class="date">2016. szeptember 17. 17 órakor</span>
+        <span id="timer" class="timer"></span>
+    </h2>
+</header>
+<!-- HEADER ENDS -->
+
+<!--- MAIN CONTENT STARTS -->
+<div class="content">
+
+    <!-- ABOUT SECTION STARTS -->
+    <section id="about" class="about clearfix">
+        <h2 class="title">Rólunk</h2>
+
+        <div class="he">
+            <p class="text-center">
+                <a href="https://www.facebook.com/nikolett.szoke.12" target="_blank"><strong>Szőke Nikolett</strong></a>
+            </p>
+            <p>
+                "Zolival a koliban találkoztunk, szomszédok voltunk. Hosszú, göndör, hippi haja volt, amikor megismertem.
+                Aztán elment fodrászhoz és újra bemutatkoztam neki :) <br /> Most már én vágom a haját!"
+            </p>
+        </div>
+        <div class="she">
+            <p class="text-center">
+                <a href="https://www.facebook.com/holoda.zoltan" target="_blank"><strong>Holoda Zoltán</strong></a>
+            </p>
+            <p>
+                "Én Nikiben találtam meg az Igazit, sőt egyszer már igent is mondott Nekem.<br />
+                Ha kíváncsiak vagytok, hogy mindezt nagyközönség előtt is megerősíti-e, akkor csatlakozzatok hozzánk ezen a nagy napon."
+            </p>
+        </div>
+        <div class="they">
+            <p class="text-center">
+                Sokat jelentene <strong>nekünk</strong>, ha osztozhatnánk Veletek örömünkben!
+            </p>
+        </div>
+    </section>
+    <!-- ABOUT SECTION ENDS -->
+
+    <!-- SAVE THE DATE SECTION STARTS -->
+    <section id="savethedate" class="about clearfix">
+        <div class="flexslider">
+            <ul class="slides">
+                <li style="background-image: url(burito/images/savethedate_wide.png); background-position: center 10%;"></li>
+            </ul>
+        </div>
+        <div class="calendar">
+            <a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NzBvcHFuYXZ0cXY1Y3FjNDEwMnVkZTE1bWMgaG9sb2RhQG0&amp;tmsrc=holoda%40gmail.com">
+                <img src="images/calendar.png" width="50" height="50" alt="Add to calendar">
+            </a>
+        </div>
+    </section>
+    <!-- SAVE THE DATE SECTION ENDS -->
+    
+    <!-- CEREMONY SECTION STARTS -->
+    <section id="ceremony" class="flex-container ceremony">
+        <div class="wrapper clearfix">
+
+                <div class="ceremony-1">
+                    <span class="image pile">
+                        <img src="burito/images/templom.jpg" width="300" height="300" alt="templom">
+                    </span>
+                    <h3>Szertartás</h3>
+                    <h4>Nem lesz</h4>
+                </div>
+                <div class="ceremony-2">
+                    <span class="image pile">
+                        <img src="burito/images/malomkert.jpg" width="300" height="300" alt="Malomkert Panzió">
+                    </span>
+
+                    <h3>Polgári esküvő, lakodalom és szállás</h3>
+                    <h4>Malomkert Panzió és Étterem</h4>
+                    <p>17:00</p>
+                    <p>Nagybörzsöny, Hunyadi tér 18. hszm. 2634</p>
+                    <p><a href="http://www.borzsonyhotel.hu/" target="_blank">www.borzsonyhotel.hu</a></p>
+                </div>
+            
+        </div>
+
+        <div id="google-map-1" style="height: 12em;"></div>
+
+    </section>
+    <!-- CEREMONY SECTION ENDS -->
+
+        <!-- GIFT -->
+    <section class="about clearfix">
+        <h2 class="title">Nászajándék</h2>
+        <div id="gift" class="wrapper clearfix">
+            <p class="text-center">
+                Köszönjük, már mindenünk megvan, de van néhány hely, ahova szívesen ellátogatnánk:
+            </p>
+            <div class="text-center">
+                <span class="image">
+                    <img src="burito/images/naszut_1_s.jpg" width="300" height="108" alt="Nászút 1">
+                </span>
+                <span class="image">
+                    <img src="burito/images/naszut_3_s.jpg" width="300" height="108" alt="Nászút 3">
+                </span>
+                <span class="image">
+                    <img src="burito/images/naszut_2_s.jpg" width="300" height="108" alt="Nászút 2">
+                </span>
+            </div>
+            <p class="text-center">
+                Ehhez <strong>TE</strong> is hozzájárulhatsz! :)
+            </p>
+        </div>
+    </section>
+    <!-- GIFT ENDS -->
+    
+    <!--- RSVP STARTS -->
+    <section id="rsvp" class="contact">
+        <h2 class="title">Jönnénk!</h2>
+
+        <div class="wrapper">
+
+            
+            <h3>Kérdés esetén keress minket bátran:</h3>
+
+            <div class="contact-details contact-details-1">
+                <h4>Niki</h4>
+                <p>+36 30 570 6210</p>
+                <p>
+                    <a href="mailto:szoke.nikolett@gmail.com?subject=Esküvő">szoke.nikolett@gmail.com</a>
+                </p>
+            </div>
+            <div class="contact-details contact-details-2">
+                <h4>Zoli</h4>
+                <p>+36 70 776 6703</p>
+                <p>
+                    <a href="mailto:holoda@gmail.com?subject=Eskövő">holoda@gmail.com</a>
+                </p>
+            </div>
+
+        </div>
+
+                    <div>
+            </div>
+        
+    </section>
+    <!--- RSVP ENDS -->
+
+    <!-- FOOTER STARTS -->
+    <footer id="footer">
+        <p class="copyright"> &copy; 2016 Holoda</p>
+    </footer>
+    <!-- FOOTER ENDS -->
+
+</div>
+<!--- MAIN CONTENT ENDS -->
+
+</body>
+</html>
