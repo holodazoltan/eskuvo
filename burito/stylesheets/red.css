@@ -940,7 +940,7 @@ footer {
 
 @media only screen and (min-width: 1140px) {
   .flexslider .slides > li {
-    padding-bottom: 35%; }
+    padding-bottom: 60%; }
 
   .no-touch .flexslider .slides > li.fixed {
     background-attachment: fixed; } 
