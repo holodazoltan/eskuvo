@@ -17,6 +17,7 @@
     <!--   main stylesheet  -->
     <link rel="stylesheet" href="burito/stylesheets/red.css" type="text/css" media="screen" title="no title">
     <link rel="stylesheet" href="burito/stylesheets/main.css" type="text/css" media="screen" title="no title">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 
     <meta property="og:image" content="burito/images/niki-zoli.png"/>
 
@@ -144,6 +145,7 @@
         <a class="to-scroll" href="#savethedate">Időpont</a>
         <a class="to-scroll" href="#ceremony">Szertartás</a>
         <!-- a href="#" id="gallery">Képek</a -->
+        <a class="to-scroll" href="#music">Zene</a>
         <a class="to-scroll" href="#gift">Nászajándék</a>
         <a class="to-scroll" href="#rsvp">Kontakt</a>
         <div class="effect"></div>
@@ -199,6 +201,8 @@
 
     <!-- SAVE THE DATE SECTION STARTS -->
     <section id="savethedate" class="about clearfix">
+        <h2 class="title">Készülj az időpontra</h2>
+
         <div class="flexslider">
             <ul class="slides">
                 <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1; background-image: url(&quot;/burito/images/savethedate1.jpg&quot;); background-position: center center;" class=""></li>
@@ -222,7 +226,9 @@
     <!-- SAVE THE DATE SECTION ENDS -->
     
     <!-- CEREMONY SECTION STARTS -->
-    <section id="ceremony" class="flex-container ceremony">
+    <section id="ceremony" class="flex-container ceremony about">
+        <h2 class="title">Szertartás</h2>
+
         <div class="wrapper clearfix">
                 <div class="ceremony-1">
                     <span class="image pile">
@@ -250,9 +256,28 @@
     </section>
     <!-- CEREMONY SECTION ENDS -->
 
-        <!-- GIFT -->
+    <!-- MUSIC SECTION STARTS -->
+    <section id="music" class="flex-container about">
+        <h2 class="title">Zene kérés</h2>
+
+        <div class="wrapper clearfix">
+            <p>
+            Ha van olyan zene, amire garantáltan táncra perdülsz, küldd el nekünk! Ez komoly felkérés, tényleg írd meg a kedvenc partizenéidet!
+            </p>
+
+            <form action="https://formspree.io/holoda.zoltan@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Ki vagy te?">
+                <input type="text" name="music" placeholder="Mit hallanál szívesen a lagzin?">
+                <input type="submit" value="Elküld">
+            </form>
+        </div>
+    </section>
+    <!-- MUSIC SECTION ENDS -->
+
+    <!-- GIFT -->
     <section class="about clearfix">
         <h2 class="title">Nászajándék</h2>
+
         <div id="gift" class="wrapper clearfix">
             <p class="text-center">
                 Köszönjük, már mindenünk megvan, de van néhány hely, ahova szívesen ellátogatnánk:
