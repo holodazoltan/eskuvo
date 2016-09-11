@@ -119,6 +119,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+ul {
+  list-style: none;
+  background: #fff;
+  padding: 1em;
+  border-radius: 10px;
+  list-style-type: square;
+  list-style-position: inside; }
+  
+
 /*-----------------------------------------------------------------*/
 /*---------------------- 	GENERAL STYLES --------------------------*/
 /*-----------------------------------------------------------------*/
