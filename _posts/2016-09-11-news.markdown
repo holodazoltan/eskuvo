@@ -1,0 +1,9 @@
+---
+title:  "Hírek"
+date:   2016-09-11 15:50:00 +0200
+categories: update
+---
+Kikerült pár hír és jótanács az esküvővel kapcsolatban<br/>
+<a href="{{ site.url }}">{{ site.url }}</a>
+
+<link rel="alternate" type="application/rss+xml" title="{{ site.url }}" href="{{ site.url }}/feed.xml">
