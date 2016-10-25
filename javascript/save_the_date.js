@@ -183,9 +183,9 @@ var save_the_date = {
     setCountDown: function () {
         var self = this;
         var now = new Date();
-        self.secondsDiff = Math.floor((self.weddingDate.getTime() - now.getTime()) / 1000);
+        self.secondsDiff = Math.floor((now.getTime() - self.weddingDate.getTime() ) / 1000);
 
-        var $timer_html = 'Már csak: <span id="days"></span> ' + self.option.labels[0] +
+        var $timer_html = 'Már együtt <span id="days"></span> ' + self.option.labels[0] +
             '  <span id="hours"></span> ' + self.option.labels[1] +
             '  <span id="minutes"></span> ' + self.option.labels[2] +
             '  <small><span id="seconds"></span> ' + self.option.labels[3] + '</small>';
@@ -199,7 +199,7 @@ var save_the_date = {
             setTimeout(function () {
                 requestAnimationFrame(count);
                 var now = new Date(),
-                    secondsDiff = Math.floor((self.weddingDate.getTime() - now.getTime()) / 1000);
+                    secondsDiff = Math.floor((now.getTime() - self.weddingDate.getTime()) / 1000);
 
                 var seconds = secondsDiff,
                     minutes = Math.floor(seconds / 60),
